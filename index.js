@@ -13,19 +13,15 @@ function phoneCall(min1, min2_10, min11, s) {
     while (s > 0) {
         mins += 1;
         
-        if (mins === 2) {
-            rate = min2_10;
-        }
-        else if (mins > 10) {
-            rate = min11;
-        }
+        if (mins === 2) rate = min2_10;
+        else if (mins > 10) rate = min11;
         
         s -= rate;
         
-        if (s < 0) {
-            mins -= 1;
-        }
+        if (s < 0) mins -= 1; 
     }
     
     return mins;
 }
+
+phoneCall(3, 1, 2, 20);
